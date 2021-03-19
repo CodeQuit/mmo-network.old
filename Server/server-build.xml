@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="mmo-network-server" default="dist" basedir=".">
+	<description>PB Global Library</description>
+	<property name="root" location="lib-server"/>
+	<property name="src" location="${root}/src"/>
+	<property name="libs" location="libs"/>
+	<property name="svnlibs" location="libs-svn"/>
+	<property name="serverlibs" location="dist/ServerMMo/libs"/>
+	<property name="build" location="${root}/build"/>
+	<property name="build.classes" location="${build}/classes"/>
+
+	<path id="classpath">
+		<fileset dir="${libs}">
+			<include name="*.jar"/>
+			<exclude name="pb-updater.jar"/>
+		</fileset>
+	</path>
+
+	<target name="clean" description="Remove old library.">
+		<delete dir="${build}"/>
+		<delete file="${libs}/pb-updater.jar"/>
+		<delete file="${serverlibs}/pb-updater.jar"/>
+	</target>
+
+	<target name="dirs" depends="clean" description="Create Dirs.">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${build.classes}"/>
+	</target>
+
+	<target name="compile" depends="dirs" description="Compile the source." >
+		<copy todir="${build.classes}/ru/mmo/global/logging">
+			<fileset dir="${src}/ru/mmo/global/logging">
+				<include name="log4j.xml"/>
+				<include name="log4j.dtd"/>
+			</fileset>
+		</copy>
+		<javac includeantruntime="false" destdir="${build.classes}" optimize="off" debug="on" source="1.6" target="1.6" encoding="UTF-8" nowarn="off">
+			<compilerarg value="-Xlint:all"></compilerarg>
+			<src path="${src}"/>
+			<classpath refid="classpath"/>
+		</javac>
+
+		<tstamp>
+			<format property="build.tstamp" pattern="yyyy.MM.dd HH:mm"/>
+		</tstamp>
+		
+		<exec dir="${svnlibs}" executable="${svnlibs}/svnversion" outputproperty="global.revision" failifexecutionfails="true">
+			<arg line="-n ${src}"/>
+		</exec>
+
+		<echo message="Subversion revision: ${global.revision}"/>
+
+		<concat destfile="${build}/classes/ru/mmo/global/info/build-info.ini">version=${global.revision}
+builddate=${build.tstamp}: ${user.name}/${os.name}</concat>
+	
+		<jar destfile="${build}/mmo-server.jar" description="Add classes in JAR." level="9">
+			<fileset dir="${build.classes}"/>
+			<manifest>
+				<attribute name="Implementation-Revision" value="${global.revision}"/>
+			</manifest>
+		</jar>		
+	</target>
+	
+	<target name="dist" depends="compile" description="Create Dirs.">
+		<copy todir="${libs}">
+			<fileset dir="${build}">
+				<include name="mmo-server.jar"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="${serverlibs}">
+			<fileset dir="${build}">
+				<include name="mmo-server.jar"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

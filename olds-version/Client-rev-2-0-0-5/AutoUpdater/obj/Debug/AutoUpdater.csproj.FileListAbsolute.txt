@@ -1,0 +1,9 @@
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\BIN\AutoUpdater.exe.config
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\BIN\AutoUpdater.exe
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\BIN\AutoUpdater.pdb
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\AutoUpdater\obj\Debug\AutoUpdater.csprojResolveAssemblyReference.cache
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\AutoUpdater\obj\Debug\AutoUpdater.Main.resources
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\AutoUpdater\obj\Debug\AutoUpdater.Properties.Resources.resources
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\AutoUpdater\obj\Debug\AutoUpdater.csproj.GenerateResource.Cache
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\AutoUpdater\obj\Debug\AutoUpdater.exe
+I:\MNetwork\olds-version\Client-rev-2-0-0-5\AutoUpdater\obj\Debug\AutoUpdater.pdb

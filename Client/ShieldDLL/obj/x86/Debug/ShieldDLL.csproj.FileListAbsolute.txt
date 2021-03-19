@@ -1,0 +1,7 @@
+I:\MmoNetwork\Client\ShieldDLL\bin\Debug\ShieldDLL.dll
+I:\MmoNetwork\Client\ShieldDLL\bin\Debug\ShieldDLL.pdb
+I:\MmoNetwork\Client\ShieldDLL\obj\x86\Debug\ShieldDLL.csprojResolveAssemblyReference.cache
+I:\MmoNetwork\Client\ShieldDLL\obj\x86\Debug\ShieldDLL.Properties.Resources.resources
+I:\MmoNetwork\Client\ShieldDLL\obj\x86\Debug\ShieldDLL.csproj.GenerateResource.Cache
+I:\MmoNetwork\Client\ShieldDLL\obj\x86\Debug\ShieldDLL.dll
+I:\MmoNetwork\Client\ShieldDLL\obj\x86\Debug\ShieldDLL.pdb

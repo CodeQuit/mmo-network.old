@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ConfigurationFile>
+  <UpdateServerVersionsUrl>http://localhost/newupdater/versions.file</UpdateServerVersionsUrl>
+  <UpdateServerMainExeUrl>http://localhost/newupdater/update.exe</UpdateServerMainExeUrl>
+  <LocalMainExe>update.bat</LocalMainExe>
+  <Version>0</Version>
+</ConfigurationFile>

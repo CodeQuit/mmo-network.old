@@ -1,0 +1,239 @@
+div#login_panel
+{
+	margin:30px auto;
+	padding:0px;
+	width:563px;
+}
+
+div#login input
+{
+	float:right;
+}
+
+div#register_panel
+{
+	margin:60px auto;
+	width:550px;
+}
+
+div#button_reg
+{
+	margin:0px;
+	padding:0px;
+	float:right;
+}
+
+div#footer
+{
+	margin:60px 0px;
+	padding:0px;
+}
+
+div#infoMessage
+{
+	margin:0 auto;
+	padding:0px;
+	width:400px;
+}
+
+div#profile_page
+{
+	margin: 50px auto;
+	padding:0px;
+	width: 350px;
+}
+
+div#news_page
+{
+    margin: 50px auto;
+    padding:0px;
+    width: 650px;
+}
+
+div#game_list
+{
+	margin:15px 50px;
+	padding:0px;
+	float:left;
+}
+
+div#right_block
+{
+	margin: 15px 50px 0px 0px;
+	width:290px;
+	height:300px;
+	float:right;
+}
+
+div#block_name
+{
+	margin:0px;
+	padding:0px;
+	font-size:14px;
+	text-align:center;
+}
+
+div#status_block
+{
+	margin:20px 0px;
+	padding:0px;
+	width:250px;
+}
+
+div#service_block
+{
+	margin:20px 0px;
+	padding:0px
+	width:250px;
+}
+
+ul#status_game.nav.nav-list
+{
+	width:222px;
+}
+
+ul#service_game.nav.nav-list
+{
+	width:145px;
+}
+
+div#content_page
+{
+	margin:0px auto;
+	width:570px;
+}
+
+div#notauth
+{
+	margin:50px auto;
+	padding:0px;
+	height:24px;
+	width:381px;
+}
+
+div#register_block
+{
+	margin:50px 0px;
+}
+
+div#forgot_password
+{
+	margin:50px auto;
+	padding:0px;
+	width:500px;
+}
+
+div#message_info
+{
+	margin:50px auto;
+	padding:0px;
+	width:500px;
+}
+
+div#news
+{
+	margin:0px 0px;
+	padding:0px 0px;
+}
+
+div#content_block_name
+{
+	margin:0px 0px;
+	padding:50px 0px;
+}
+
+div#user_block
+{
+	width:100%;
+	height:57px;
+	margin:24px 0px;
+}
+
+div#panel
+{
+	margin:0px 0px;
+}
+
+div#user_info
+{
+	width:230px;
+	float:right;
+	margin:0px 50px;
+}
+
+div#logs_user_view
+{
+	margin:50px 0px;
+}
+
+.table {
+font-size:11px;
+}
+
+div#change_password
+{
+	margin:50px auto;
+	width:245px;
+}
+
+div#userlist
+{
+	margin:50px 0px;
+	padding:0px;
+}
+
+div#welcome_content
+{
+	margin:50px auto;
+	width:600px;
+	
+}
+
+div.mainInfo
+{
+	margin:50px auto;
+	width:44%;
+}
+.news_content{
+	width:510px;
+}
+
+div#StatusBlock
+{
+	margin-top:50px;
+}
+
+div#configuration
+{
+	margin-top:50px;
+}
+
+div#config_edit
+{
+	margin-top:50px;
+}
+
+div#support
+{
+	margin-top:50px;
+	margin-left:50px;
+	margin-right:50px;
+}
+
+textarea[name="question"]
+{
+	width:360px;
+	height:210px;
+}
+
+input[name="submit"]
+{
+	height:32px;
+	width:190px;
+}
+
+div#question
+{
+	margin:0 auto;
+	width:525px;
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PB_DAO_LIBRARY" default="dist" basedir=".">
+	<description>MMO DAO Library</description>
+	<property name="root" location="mmo-dao"/>
+	<property name="src" location="${root}"/>
+	<property name="libs" location="libs"/>
+	<property name="svnlibs" location="libs-svn"/>
+	<property name="mmolibs" location="dist/ServerMMo/libs"/>
+	<property name="build" location="${root}/build"/>
+	<property name="build.classes" location="${build}/classes"/>
+
+	<path id="classpath">
+		<fileset dir="${libs}">
+			<include name="*.jar"/>
+			<exclude name="mmo-dao.jar"/>
+		</fileset>
+	</path>
+
+	<target name="clean" description="Remove old library.">
+		<delete dir="${build}"/>
+		<delete file="${libs}/mmo-dao.jar"/>
+		<delete file="${mmolibs}/mmo-dao.jar"/>
+	</target>
+
+	<target name="dirs" depends="clean" description="Create Dirs.">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${build.classes}"/>
+	</target>
+
+	<target name="compile" depends="dirs" description="Compile the source." >
+		<javac includeantruntime="false" destdir="${build.classes}" optimize="off" debug="on" source="1.6" target="1.6" encoding="UTF-8" nowarn="off">
+			<compilerarg value="-Xlint:all"></compilerarg>
+			<src path="${src}"/>
+			<classpath refid="classpath"/>
+		</javac>
+
+		<tstamp>
+			<format property="build.tstamp" pattern="yyyy.MM.dd HH:mm"/>
+		</tstamp>
+		
+		<exec dir="${svnlibs}" executable="${svnlibs}/svnversion" outputproperty="dao.revision" failifexecutionfails="true">
+			<arg line="-n ${src}"/>
+		</exec>
+
+		<echo message="Subversion revision: ${dao.revision}"/>
+
+		<concat destfile="${build}/classes/ru/mmo/dao/build-info.ini">version=${dao.revision}
+builddate=${build.tstamp}: ${user.name}/${os.name}</concat>
+
+		<jar destfile="${build}/mmo-dao.jar" description="Add classes in JAR." >
+			<fileset dir="${build.classes}"/>
+			<manifest>
+				<attribute name="Implementation-Revision" value="${dao.revision}"/>
+			</manifest>
+		</jar>		
+	</target>
+	
+	<target name="dist" depends="compile" description="Create Dirs.">
+		<copy todir="${libs}">
+			<fileset dir="${build}">
+				<include name="mmo-dao.jar"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="${mmolibs}">
+			<fileset dir="${build}">
+				<include name="mmo-dao.jar"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

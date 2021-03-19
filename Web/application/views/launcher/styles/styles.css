@@ -1,0 +1,27 @@
+body
+{
+	margin:0px;
+	padding:0px;
+	
+}
+#background { background: url('../styles/img/Main_form_03.png') no-repeat; height:432px; width:803px; position:absolute;}
+
+#game_list
+{
+	width: 174px; height:384px; padding: 12px 24px; float:left; margin:2% 0px; position:absolute; 
+}
+
+select
+{
+	height:385px;
+	width:175px;
+}
+
+#game_news
+{
+	height:294px; 
+	width:537px;
+	background: url('../styles/img/games/pointblank.jpg') no-repeat;
+	margin:55px 239px;
+	position:absolute;
+}

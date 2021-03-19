@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+	<!-- This appender prints information to console -->
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Encoding" value="utf8"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%C{1}] %m%n"/>
+		</layout>
+	</appender>
+	<!-- This appender prints all that is shown in console to file -->
+	<appender name="CONSOLE_TO_FILE" class="ru.mmo.global.logging.log4j.appenders.TruncateToZipFileAppender">
+		<param name="Encoding" value="utf8"/>
+		<param name="file" value="log/console.log"/>
+		<param name="append" value="false"/>
+		<param name="backupDir" value="log/backup/console"/>
+		<!-- Windows systems doesn't support : char in file names -->
+		<param name="backupDateFormat" value="HH-mm-ss dd-MM-yyyy"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%p %d{HH:mm:ss dd-MM-yyyy}] %c:%L - %m%n"/>
+		</layout>
+	</appender>
+	<!-- This appender accepts only messages with exceptions and logs them to separate file -->
+	<appender name="ERROR_APPENDER" class="ru.mmo.global.logging.log4j.appenders.TruncateToZipFileAppender">
+		<param name="Encoding" value="utf8"/>
+		<param name="file" value="log/errors.log"/>
+		<param name="append" value="false"/>
+		<param name="backupDir" value="log/backup/errors"/>
+		<!-- Windows systems doesn't support : char in file names -->
+		<param name="backupDateFormat" value="HH-mm-ss dd-MM-yyyy"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%p %d{HH:mm:ss dd-MM-yyyy}] %c:%L - %m%n"/>
+		</layout>
+		<filter class="ru.mmo.global.logging.log4j.filters.ThrowablePresentFilter"/>
+	</appender>
+	<root>
+		<priority value="info"/>
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="CONSOLE_TO_FILE"/>
+		<appender-ref ref="ERROR_APPENDER"/>
+	</root>
+	<categoryFactory class="ru.mmo.global.logging.log4j.ThrowableAsMessageAwareFactory"/>
+</log4j:configuration>

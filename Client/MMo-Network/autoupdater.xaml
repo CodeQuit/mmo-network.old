@@ -1,0 +1,15 @@
+﻿<Window x:Class="MMo_Network.AutoUpdater"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Обновление..." Height="183" Width="493" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" Name="autoupdate">
+    <Window.Background>
+        <ImageBrush ImageSource="/MMo-Network;component/Resources/launcher_auto_load_1_0_0_2.png" />
+    </Window.Background>
+    <Grid Height="141" Name="grid1" Width="458">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*" />
+            <RowDefinition Height="53*" />
+        </Grid.RowDefinitions>
+        <ProgressBar Grid.Row="1" Height="19" HorizontalAlignment="Left" Margin="21,64,0,0" Name="ProgressUpdate" VerticalAlignment="Top" Width="413" ValueChanged="ProgressUpdate_ValueChanged" />
+    </Grid>
+</Window>

@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMo-Network", "MMo-Network.csproj", "{ADDCABAA-9019-4670-8444-C288B3015A24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMoNetworkEngine", "..\MMoNetwork_Engine\MMoNetworkEngine.csproj", "{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShieldDLL", "..\ShieldDLL\ShieldDLL.csproj", "{F17CCB18-7681-46C6-B88D-635E07D38C5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Debug|x86.ActiveCfg = Debug|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Debug|x86.Build.0 = Debug|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Release|Any CPU.ActiveCfg = Release|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Release|Mixed Platforms.Build.0 = Release|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Release|x86.ActiveCfg = Release|x86
+		{ADDCABAA-9019-4670-8444-C288B3015A24}.Release|x86.Build.0 = Release|x86
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{249A3587-9AF1-404F-9F6F-3DBEA671D4F5}.Release|x86.ActiveCfg = Release|Any CPU
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Debug|x86.ActiveCfg = Debug|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Debug|x86.Build.0 = Debug|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Release|Any CPU.ActiveCfg = Release|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Release|x86.ActiveCfg = Release|x86
+		{F17CCB18-7681-46C6-B88D-635E07D38C5F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

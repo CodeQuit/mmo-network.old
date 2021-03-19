@@ -1,0 +1,11 @@
+﻿<Window x:Class="MMo_Network.PreStart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PreStart" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="164" Width="445">
+    <Window.Background>
+        <ImageBrush ImageSource="/MMo-Network;component/Resources/launcher_preload.png" />
+    </Window.Background>
+    <Grid Height="137" Width="424" IsHitTestVisible="False" ShowGridLines="False" SnapsToDevicePixels="False" VerticalAlignment="Stretch" Visibility="Visible" Background="{x:Null}">
+        <Label Content="version: 0.0.0.0" Height="15" HorizontalAlignment="Left" Margin="306,117,0,0" Name="version_text" VerticalAlignment="Top" Width="113" FontSize="12" Foreground="#96000000" Padding="0" />
+    </Grid>
+</Window>

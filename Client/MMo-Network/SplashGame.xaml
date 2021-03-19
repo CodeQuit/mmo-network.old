@@ -1,0 +1,6 @@
+﻿<Window x:Class="MMo_Network.SplashGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Загрузка..." Height="191" Width="372" WindowStartupLocation="CenterScreen" WindowStyle="None" Name="Splash" AllowsTransparency="True" ShowInTaskbar="False" Background="{x:Null}">
+    <Label Content="Загрузка..." Height="53" Name="label1" Width="177" FontSize="32" Background="White"></Label>
+</Window>

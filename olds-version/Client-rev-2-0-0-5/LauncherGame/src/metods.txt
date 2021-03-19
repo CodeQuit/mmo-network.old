@@ -1,0 +1,471 @@
+﻿========================================================
+Этот файл содержит удаленные методы из программы...    
+========================================================
+
+
+========================================================
+LauncherGame.src.test.windows.autorize.Authform;
+========================================================
+
+/* 
+         * Проверка правильности введенного аккаунта с указанием 
+         * string username
+         * string password
+         * 
+         */ 
+        //public void mysqlCheckAccount(string username, string password)
+        //{
+        //    string MyConString = "SERVER=localhost;" + "DATABASE=mysite;" + "UID=root;" + "PASSWORD='root';";
+        //    MessageBox.Show(MyConString);
+        //    MySqlConnection connection = new MySqlConnection(MyConString);
+
+        //    MySqlCommand command = connection.CreateCommand();
+        //    MySqlDataReader Reader;
+
+        //    //string strSQL = "SELECT * FROM auth WHERE user_name = '" + textBox1.Text + "' AND user_pass = '" + textBox2.Text + "' ";  
+        //    string strSQL = "SELECT * FROM auth WHERE user_name = '" + username + "' AND user_pass = '" + password + "' ";
+        //    command.CommandText = strSQL;
+        //    connection.Open();
+
+        //    Reader = command.ExecuteReader();
+
+        //    while (Reader.Read())
+        //    {
+        //        MessageBox.Show("Found Username " + Reader["user_name"]); //<-- I'm trying to get the row ??  
+        //    }
+
+        //    connection.Close(); 
+        //}
+
+
+
+        ///*
+        // * 
+        // * 
+        // */ 
+        //private void Acepted_Click(object sender, EventArgs e)
+        //{
+        //   mysqlCheckAccount(textBox1.Text, textBox2.Text);
+            
+        //}
+        
+========================================================        
+LauncherGame.LauncherGame;
+========================================================
+
+        ////Автоупдейтер прогаммы - временный вариант
+        //private void DownloadFile()
+        //{
+        //    string url = @"http://darkteam.zapto.org/launcher/update/LauncherGame.exe";
+
+        //    // Create an instance of WebClient
+        //    WebClient client = new WebClient();
+
+        //    // Hookup DownloadFileCompleted Event
+        //    client.DownloadFileCompleted +=
+        //        new AsyncCompletedEventHandler(versionCheckB_DownloadFileCompleted);
+
+        //    // Start the download and copy the file to c:\temp
+        //    client.DownloadFileAsync(new Uri(url), @"update\LauncherGame.exe.new");
+        //}
+
+        //Событие завершение закачки
+        //void versionCheckB_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        //{
+        //    loadedindex += 1;
+        //    if (loadedindex == 2) //7
+        //    {
+        //        //CheckFile("update\\LauncherGame.exe.LG");
+        //        //CheckFile("function.exe");
+        //        //CheckFile("update\\LauncherGame.ini.LG");
+        //        //CheckFile("update\\HTML\\StartPage.htm.LG");
+        //        //CheckFile("update\\LogLG.dll.LG");
+        //        //CheckFile("update\\version.ini.LG");
+        //        //CheckFile("update\\HTML\\ErrorConnection.htm.LG");
+
+        //        //CheckFile("update.zip");
+        //        //CheckFile("DTSystem.exe");
+        //        //Process u = Process.Start("DTSystem.exe");
+        //        //Process.GetCurrentProcess().Kill();
+                
+        //    }
+        //}
+
+
+
+        //updaterLG
+        //Игрокам не использовать.
+        //Это пока что тестовый вариант.
+        //закометирована в связи с новой обновлялкой
+        //public void updaterLG(string LoadFile, string endFile)
+        //{
+        //    // Create an instance of WebClient
+        //    WebClient test = new WebClient();
+
+        //    // Hookup DownloadFileCompleted Event
+        //    test.DownloadFileCompleted +=
+        //        new AsyncCompletedEventHandler(versionCheckB_DownloadFileCompleted);
+
+        //    // Start the download and copy the file to c:\temp
+        //    test.DownloadFileAsync(new Uri(LoadFile), @endFile);
+
+        //    //Запись в лог
+        //    filemanagerlog(endFile, "file completed.");
+        //}
+
+
+        ////Пишем debug логи
+        //public void writelog(string log)
+        //{
+        //    DateTime date1 = DateTime.Now;
+        //    StreamWriter sw; // объект потока для записи
+        //    StringBuilder builder; // построитель строк
+        //    builder = new StringBuilder();
+
+        //    // создаем поток для записи - file.txt с добавлением в конец файла, кодировка UTF8
+        //    using (sw = new StreamWriter(LGPathProgramm + "LauncherGame.log", true, Encoding.UTF8))
+        //    {
+        //        sw.WriteLine(date1 + "  -  " + "[Debugging] " + log); // запись строки
+        //        sw.Write(builder.ToString()); // запись сформированного списка строк
+        //        // сбрасываем буфера и даем доступ к файлу
+        //        sw.Close();
+        //    }
+        //}
+
+        ////Пишем error логи
+        //public void writeError(string Error)
+        //{
+        //    DateTime date2 = DateTime.Now;
+        //    StreamWriter sw; // объект потока для записи
+        //    StringBuilder builder; // построитель строк
+        //    builder = new StringBuilder();
+
+        //    // создаем поток для записи - file.txt с добавлением в конец файла, кодировка UTF8
+        //    using (sw = new StreamWriter(@"LauncherGame.log", true, Encoding.UTF8))
+        //    {
+        //        sw.WriteLine(date2 + "  -  " + "[Error] " + Error); // запись строки
+        //        sw.Write(builder.ToString()); // запись сформированного списка строк
+        //        // сбрасываем буфера и даем доступ к файлу
+        //        sw.Close();
+        //    }
+        //}
+
+        ////Пишем critical логи
+        //public void writeCritical(string Critical)
+        //{
+
+        //    DateTime date2 = DateTime.Now;
+        //    StreamWriter sw; // объект потока для записи
+        //    StringBuilder builder; // построитель строк
+        //    builder = new StringBuilder();
+
+        //    // создаем поток для записи - file.txt с добавлением в конец файла, кодировка UTF8
+        //    using (sw = new StreamWriter(@"LauncherGame.log", true, Encoding.UTF8))
+        //    {
+        //        sw.WriteLine(date2 + "  -  " + "[Critical] " + Critical); // запись строки
+        //        sw.Write(builder.ToString()); // запись сформированного списка строк
+        //        // сбрасываем буфера и даем доступ к файлу
+        //        sw.Close();
+        //    }
+        //}
+
+        ////Пишем filemanagerlog логи
+        //public void filemanagerlog(string filemanagerlog, string textinfo)
+        //{
+
+        //    DateTime date4 = DateTime.Now;
+        //    StreamWriter sw; // объект потока для записи
+        //    StringBuilder builder; // построитель строк
+        //    builder = new StringBuilder();
+
+        //    // создаем поток для записи - file.txt с добавлением в конец файла, кодировка UTF8
+        //    using (sw = new StreamWriter(@"LauncherGame.log", true, Encoding.UTF8))
+        //    {
+        //        sw.WriteLine(date4 + "  -  " + "[FileManager] " + filemanagerlog + " " + textinfo); // запись строки
+        //        sw.Write(builder.ToString()); // запись сформированного списка строк
+        //        // сбрасываем буфера и даем доступ к файлу
+        //        sw.Close();
+        //    }
+        //}
+        
+        
+        
+        //Игрокам не использовать.
+        //Это пока что тестовый вариант.
+        //private void Test_Click(object sender, EventArgs e)
+        //{
+            //IsConnected();
+            //updaterLG("http://darkteam.zapto.org/launcher/update/LauncherGame.exe", "update\\LauncherGame.exe.LG");
+            //updaterLG("http://darkteam.zapto.org/launcher/update/function.exe", "update\\function.exe.LG");
+            //updaterLG("http://darkteam.zapto.org/launcher/update/launcherGame.ini", "update\\LauncherGame.ini.LG");
+            //updaterLG("http://darkteam.zapto.org/launcher/update/HTML/LauncherGame.htm", "update\\HTML\\LauncherGame.ini.LG");
+
+        //}
+
+        //Это тестовая проверка валидности файлов
+        //public void CheckFile(string filenameandpath) //проверка валидности файлов
+        //{
+        //    FileInfo LauncherGame = new FileInfo(filenameandpath);
+        //    long LauncherGamebytes = LauncherGame.Length; //оно вернет длину файла в байтах. 
+        //    if (LauncherGamebytes == 0)
+        //    {
+        //        LogLG.filemanager.filemanagerlog(filenameandpath, " file is no valid.");
+        //        IsConnected();
+
+        //    }
+        //    else
+        //    {
+        //        //file is valid
+        //        //Только тест
+        //        LogLG.filemanager.filemanagerlog(filenameandpath, " file is valid.");
+        //    }
+        //}
+        
+        
+        //fix to new updater
+        //public void versioncheckinternet()
+        //{
+        //    // Create an instance of WebClient
+        //    WebClient test6 = new WebClient();
+
+        //    // Hookup DownloadFileCompleted Event
+        //    test6.DownloadFileCompleted +=
+        //        new AsyncCompletedEventHandler(versionCheckB3_DownloadFileCompleted);
+
+        //    // Start the download and copy the file to c:\temp
+        //    test6.DownloadFileAsync(new Uri("http://darkteam.zapto.org/launcher/update/version.ini"), "update\\version.ini");
+
+        //    //Запись в лог
+        //    filemanagerlog("version.ini", "file completed.");
+        //}
+
+
+        //fix to new updater
+        //void versionCheckB3_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        //{
+
+        //    StreamReader f = new StreamReader(@"update\\version.ini");
+        //    string s2 = f.ReadLine();
+        //    writelog("Checking version from internet...");
+        //    writelog(s2);
+        //}
+        
+        
+                //int countdownloaded = 0;
+        //void versiondownloadauto()
+        //{
+
+        //    RegistryKey readKey2345 = Registry.CurrentUser.OpenSubKey("LG");
+        //    string loadSettings = (string)readKey2345.GetValue("ProgrammVersionCheck");
+        //    writelog("Reading information from the registry...");
+        //    readKey2345.Close();
+
+        //    if (loadSettings == null)
+        //    {
+                
+        //    }
+        //    else if (loadSettings == "enable")
+        //    {
+
+        //        // Create an instance of WebClient
+        //        WebClient test7 = new WebClient();
+
+        //        // Hookup DownloadFileCompleted Event
+        //        test7.DownloadFileCompleted +=
+        //            new AsyncCompletedEventHandler(versionauto_DownloadFileCompleted);
+
+        //        // Start the download and copy the file to c:\temp
+        //        test7.DownloadFileAsync(new Uri("http://darkteam.zapto.org/launcher/update/version.ini"), "update\\version.ini");
+        //    }
+
+        //}
+
+        //public void versionauto_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        //{
+
+        //    Form pleasewait = new pleasewait();
+        //    pleasewait.ShowDialog();
+        //    StreamReader f = new StreamReader(@"update\\version.ini");
+        //    string s2 = f.ReadLine();
+
+        //    StreamReader f2 = new StreamReader(@"version.ini");
+        //    string s3 = f2.ReadLine();
+        //    string version ="Версия клиента " + s3 + " Версия сервера " + s2;
+        //    LogLG.Debug.writelog(version);
+
+        //    if (s2 != s3)
+        //    {
+        //        //log?
+        //        LogLG.Debug.writelog("s2 != s3");
+        //        MessageBox.Show("Доступно обновление, его можно скачать нажав кнопку 'Проверить версию'", "Доступно обновление");
+        //    }
+        //    else
+        //    {
+        //        LogLG.Debug.writelog("s2 == s3");
+        //        //Close();
+        //    }
+        //}
+        
+        
+                //private void TestAutorize_Click(object sender, EventArgs e)
+        //{
+        //    Form test = new FormAutorize();
+        //    test.ShowDialog();
+        //}
+        
+        
+        //Стартовая страница
+        //public void startpage()
+        //{
+        //    //string path = Application.StartupPath + @"\html\StartPage.htm";
+        //    //webBrowser1.Navigate(path);
+        //    webBrowser1.Navigate("http://darkteam.zapto.org/AutorizeSystem/News.html");
+        //    //filemanagerlog("Reading...", path);
+        //}
+        
+        
+            ////Это часть античита
+            //AntiCheatStart();
+            //int check = 0;
+            //String line;
+            //// Create an instance of StreamReader to read from a file.
+            //// The using statement also closes the StreamReader.
+            //using (StreamReader sr3 = new StreamReader("data.dat"))
+            //{
+
+            //    // Read and display lines from the file until the end of
+            //    // the file is reached.
+            //    while ((line = sr3.ReadLine()) != null)
+            //    {
+            //        //MessageBox.Show(line);
+            //        if (line == "NcstL0CMNE3jWnUcENJo7KntSJze9RZrtyRVjzcja7f6EzagzqX9N27LwHYapLYZotPB4w")
+            //        {
+            //            check += 1;
+            //        }
+
+            //    }
+            //}
+            ////
+            
+            
+            
+            
+                    //public void PingChecking(string addressServer)
+        //{
+
+        //    Ping pingSender = new Ping();
+        //    PingOptions options = new PingOptions();
+
+        //    // Use the default Ttl value which is 128,
+        //    // but change the fragmentation behavior.
+        //    options.DontFragment = true;
+            
+
+        //    // Create a buffer of 32 bytes of data to be transmitted.
+        //    string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        //    byte[] buffer = Encoding.ASCII.GetBytes(data);
+        //    int timeout = 900;
+        //    PingReply reply = pingSender.Send(addressServer, timeout, buffer, options);
+            
+        //    long intping = 0;
+
+        //    /////////////////////////////////
+        //    ///////Стандартный пинг//////////
+        //    /////////////////////////////////
+        //    long intpingLow = 150;///////////
+        //    long intpingNormal = 300;////////
+        //    long intpinghigh = 450;//////////
+        //    /////////////////////////////////
+
+        //    if (reply.Status == IPStatus.Success)
+        //    {
+        //        LogLG.Debug.writelog(reply.RoundtripTime.ToString(), "LauncherGame.log");
+        //        intping = reply.RoundtripTime;
+                
+
+        //        if (intping <= intpingLow)
+        //        {
+        //            PingInfo.Text = "Низкий";
+        //        }
+
+        //        else if (intping >= intpingNormal)
+        //        {
+        //            PingInfo.Text = "Нормальный";
+        //        }
+
+        //        else if (intping >= intpinghigh)
+        //        {
+        //            PingInfo.Text = "Высокий";
+        //        }
+
+        //    }
+        //    else if (reply.Status == IPStatus.TimedOut)
+        //    {
+        //        PingInfo.Text = "Не удалось";
+        //    }
+
+        //}
+
+		/// <summary>
+        /// Соединение с сервером и проверка версии.
+        /// </summary>
+        public void GetServerVersion()
+        {
+            int port_server_autorize = 11000;
+            if (debug == "true")
+            {
+                Loggers.Debug.writelog("Metod= CheckServerVersion()", debug_file);
+            }
+            //message Server
+            byte[] bytes = new byte[1024];
+            string[] packet;
+
+            //Соединяемся с удаленным устройством
+            try
+            {
+                //Устанавливаем удаленную конечную точку для сокета
+                IPHostEntry ipHost = Dns.Resolve(ServerAutorize);
+                IPAddress ipAddr = ipHost.AddressList[0];
+                IPEndPoint ipEndPoint = new IPEndPoint(ipAddr, port_server_autorize);
+                Socket sender = new Socket(AddressFamily.InterNetwork,
+                    SocketType.Stream, ProtocolType.Tcp);
+                //Соединяем сокет с удаленной конечной точкой
+                sender.Connect(ipEndPoint);
+
+                string sVersion = "01" + " " + NetworkPacket.ClientVersion;
+                
+                byte[] msg = Encoding.ASCII.GetBytes(sVersion);
+
+                //отправляем данные через сокет
+                int bytesSent = sender.Send(msg);
+
+                //Получаем ответ от удаленного устройства
+                int bytesRec = sender.Receive(bytes);
+                string datapacket = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                packet = datapacket.Split(new Char[] { ' ' });
+
+                Loggers.Debug.writelog("Entering data: " + datapacket, debugLG);
+                if (packet[1] == "0x0D")
+                {
+                    ServerVersion = Convert.ToInt32(packet[2]);
+                }
+                else
+                {
+                    MessageBox.Show("Ошибка связи с сервером.", "Ошибка.");
+                    Loggers.Debug.writelog("Error checking version...Connection failed.", debugLG);
+                    ShutdownHook.Shutdown();
+                }
+                //Освобождаем сокет
+                sender.Shutdown(SocketShutdown.Both);
+                sender.Close();
+               
+            }
+            catch (Exception e)
+            {
+                Loggers.Error.writeError("Error connecting to server! Port " + port_server_autorize, debugLG);
+                Loggers.Error.writeError(e.ToString(), debugLG);
+                //Console.WriteLine(e.ToString());
+                //src.service.WindowLoggerLG.WindowLogger.LogError2(e.ToString());
+                //MessageBox.Show("Ошибка соединия с сервером версий.", "Ошибка");
+            }
+        }
